@@ -149,7 +149,7 @@ func (b *Bot) send(c tgbotapi.Chattable) error {
 		return nil
 	}
 	msg, err := b.api.Send(c)
-	log.Printf("send msg: %+v", msg)
+	log.Printf("INFO : %+v \r\n", msg)
 	if err != nil {
 		return err
 	}

@@ -1,33 +1,20 @@
 # wireguard-telegram-bot
 
-<img alt="It was supposed to be a cool logo here" src="https://github.com/skoret/wireguard-telegram-bot/raw/dev/assets/logo.png" width="256" height="256" align="right">
 
-Simple-Dimple Telegram Bot for Wireguard VPN config generation
+Простой Telegram-бот для генерации конфигурации VPN WireGuard
 
-## Functionality
+## Функциональность
 
-- `/menu` — list available commands
-- `/newkeys` — create a new config file and qr code for new generated key pair
-- `/pubkey` — create a new config file template for the public key you provided
-- `/help` — print this message
+- `/menu` — список доступных команд
+- `/newkeys` — создайте новый конфигурационный файл и qr-код для новой сгенерированной пары ключей
+- `/pubkey` — создайте новый шаблон конфигурационного файла для предоставленного вами открытого ключа
+- `/help` — распечатайте это сообщение
 
-## Public Wireguard Telegram Bot
+## Публичный телеграмм-бот Wireguard
 
-Just drop a message to [@wrgrdtgbot](https://t.me/wrgrdtgbot) and ask him for some new config for you and your friends   
-[Install](https://www.wireguard.com/install/) Wireguard client for your device and import generated file or scan qr code
+[Install](https://www.wireguard.com/install/) Клиент WireGuard для вашего устройства и импортируйте сгенерированный файл или отсканируйте qr-код
 
-<p align="center">
-  <img alt="bot screen 1" src="https://github.com/skoret/wireguard-telegram-bot/raw/dev/assets/bot/bot_1.png" width="300" />
-  <img alt="bot screen 2" src="https://github.com/skoret/wireguard-telegram-bot/raw/dev/assets/bot/bot_2.png" width="300" /> 
-</p>
-<p align="center">
-  <img alt="bot screen 3" src="https://github.com/skoret/wireguard-telegram-bot/raw/dev/assets/bot/bot_3.png" width="300" />
-  <img alt="bot screen 4" src="https://github.com/skoret/wireguard-telegram-bot/raw/dev/assets/bot/bot_4.png" width="300" />
-</p>
-
-> **Disclaimer:** stability, availability and security **are not** guaranteed! Sorry not sorry 👉🏻👈🏻
-
-## Setup your own Wireguard Telegram Bot
+## Настройте своего собственного телеграмм-бота WireGuard
 
 - Go to [@BotFather](https://t.me/BotFather), send him `/newbot`, choose a bot's name and username, and receive Telegram Bot API Token
 - Go to AWS, GCP, whatever ☁️ and setup your remote server in desired region
@@ -51,14 +38,3 @@ Just drop a message to [@wrgrdtgbot](https://t.me/wrgrdtgbot) and ask him for so
   | `DEV_MODE`            | `false` for common uses<br />`true` for mocked internal wireguard client | dev mode suitable for manual bot ui tests |
 - `sudo go run cmd/bot/main.go`
 - 🎉 🍻 🥳
-
----
-We hope the bot will be helpful. The code is not of the best quality. Contributions are welcome!
-
----
-### Acknowledgements
-- Thanks to @randallmunroe and all [ipython/xkcd-font](https://github.com/ipython/xkcd-font) contributors for such an awesome stuff
-- Thanks to authors from [Noun Project](https://thenounproject.com/)
-  - [Arrow by Andre](https://thenounproject.com/icon/1771844/)
-  - [dragon by P Thanga Vignesh](https://thenounproject.com/icon/2863783/)
-  - [Telegram by Danil Polshin](https://thenounproject.com/icon/1634539/)

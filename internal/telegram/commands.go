@@ -19,36 +19,36 @@ var (
 	MenuCmd = command{
 		BotCommand: tgbotapi.BotCommand{
 			Command:     "menu",
-			Description: "bot menu",
+			Description: "меню бота",
 		},
-		text: "so, what do you want?",
+		text: "Итак, чего ты хочешь?",
 	}
 	ConfigForNewKeysCmd = command{
 		BotCommand: tgbotapi.BotCommand{
 			Command:     "newkeys",
-			Description: "new config for new key pair",
+			Description: "Новая конфигурация для новой пары ключей",
 		},
 		text: "",
 	}
 	ConfigForPublicKeyCmd = command{
 		BotCommand: tgbotapi.BotCommand{
 			Command:     "pubkey",
-			Description: "new config for your public key",
+			Description: "Новая конфигурация для вашего открытого ключа",
 		},
-		text: "send me your wireguard public key, like that:\n" +
-			"`/pubkey <your key in base64>`",
+		text: "пришлите мне свой открытый ключ wire guard, вот так:\n" +
+			"`/pubkey <ваш ключ в base64>`",
 	}
 	HelpCmd = command{
 		BotCommand: tgbotapi.BotCommand{
 			Command:     "help",
-			Description: "show bot's functionality with description",
+			Description: "Показать функциональность бота с описанием",
 		},
-		text: "hi, i'm wireguard telegram bot\n" +
-			"i can create new wireguard vpn configuration files for you\n\n" +
-			"/menu — available commands\n" +
-			"/newkeys — new config for new key pair\n" +
-			"/pubkey — new config for your public key\n" +
-			"/help — this message",
+		text: "Привет, я телеграмм-бот wireguard\n" +
+			"Я могу создать для вас новые файлы конфигурации WireGuard VPN\n\n" +
+			"/menu — доступные команды\n" +
+			"/newkeys — новая конфигурация для новой пары ключей\n" +
+			"/pubkey — новая конфигурация для вашего открытого ключа\n" +
+			"/help — это сообщение",
 	}
 )
 

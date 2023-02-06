@@ -15,8 +15,8 @@ import (
 type responses []tgbotapi.Chattable
 
 func (b *Bot) handleMessage(msg *tgbotapi.Message) (responses, error) {
-	log.Printf("new message: %+v", msg)
-	res0 := tgbotapi.NewMessage(msg.Chat.ID, "run /menu, silly")
+	log.Printf("INFO:   %+v \r\n", msg)
+	res0 := tgbotapi.NewMessage(msg.Chat.ID, "Запусти /menu")
 
 	if !msg.IsCommand() {
 		return responses{res0}, nil
@@ -42,12 +42,12 @@ func (b *Bot) handleMessage(msg *tgbotapi.Message) (responses, error) {
 }
 
 func (b *Bot) handleQuery(query *tgbotapi.CallbackQuery) (responses, error) {
-	log.Printf("new callback query: %+v", query)
+	log.Printf("INFO:   %+v \r\n", query)
 
 	if query.Message == nil {
 		return nil, errors.New("callback query received without message | it is possible only for inline mode")
 	}
-	log.Printf("message from callback: %+v", query.Message)
+	log.Printf("INFO:  %+v \r\n", query.Message)
 	chatID, msgID := query.Message.Chat.ID, query.Message.MessageID
 	sorryMsg := errorMessage(chatID, msgID, true)
 

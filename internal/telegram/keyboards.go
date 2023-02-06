@@ -13,12 +13,12 @@ var (
 		tgbotapi.NewInlineKeyboardRow(HelpCmd.button()),
 	)
 
-	goToMenuButton = tgbotapi.NewInlineKeyboardButtonData("go to menu", MenuCmd.Command)
+	goToMenuButton = tgbotapi.NewInlineKeyboardButtonData("вернуться в меню", MenuCmd.Command)
 
 	configForPublicKeyKeyboard = tgbotapi.NewInlineKeyboardMarkup(
 		tgbotapi.NewInlineKeyboardRow(
 			tgbotapi.NewInlineKeyboardButtonURL(
-				"How to generate wireguard key pair?",
+				"Как сгенерировать пару ключей WireGuard?",
 				"https://www.wireguard.com/quickstart/#key-generation",
 			),
 		),
