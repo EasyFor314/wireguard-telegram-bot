@@ -1,7 +1,7 @@
 package wireguard
 
 import (
-	"bytes"
+	//"bytes"
 	"io"
 	"log"
 	"net"
@@ -158,7 +158,7 @@ func nextIP(ip net.IP, inc uint) net.IP {
 }
 
 func (w *wireguard) getLatestUsedIP() (net.IP, error) {
-	device, err := w.client.Device(w.device)
+	_ , err := w.client.Device(w.device)
 	if err != nil {
 		return nil, errors.Wrap(err, "failed to get device "+w.device)
 	}
