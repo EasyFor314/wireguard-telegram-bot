@@ -166,13 +166,14 @@ func (w *wireguard) getLatestUsedIP() (net.IP, error) {
 	if err != nil {
 		return nil, errors.Wrap(err, "failed to get address for device "+w.device)
 	}
-	for _, peer := range device.Peers {
+	// Этот блок перезаписыват IP4 на IP6 поэтому потом падает при попытке сделать новый конфиг
+	/*for _, peer := range device.Peers {
 		for _, ipNet := range peer.AllowedIPs {
 			if bytes.Compare(ipNet.IP, lastIP) >= 0 {
 				lastIP = ipNet.IP
 			}
 		}
-	}
+	}*/
 	if lastIP == nil {
 		return nil, errors.New("failed to get latest used ip for device " + w.device)
 	}
