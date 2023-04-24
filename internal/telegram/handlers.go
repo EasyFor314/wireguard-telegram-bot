@@ -119,7 +119,7 @@ func createFile(chatID int64, content []byte) tgbotapi.Chattable {
 
 func createQR(chatID int64, content []byte) tgbotapi.Chattable {
 	options := []qrcode.ImageOption{
-		qrcode.WithLogoImageFilePNG("assets/logo-min.png"),
+		//qrcode.WithLogoImageFilePNG("assets/logo-min.png"),
 		qrcode.WithQRWidth(7),
 		qrcode.WithBuiltinImageEncoder(qrcode.PNG_FORMAT),
 	}
